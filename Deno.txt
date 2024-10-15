@@ -1,0 +1,32 @@
+to install deno
+-irm https://deno.land/install.ps1 | iex
+
+to check version
+-deno --version
+
+to create deno project
+-deno init <appname>
+
+to run deno 
+-deno run <filename>.ts
+
+to run deno and watch for files changes
+-deno task dev
+
+to test
+-deno test
+
+to create application using nextjs in deno
+-deno demo -A npm:create-next-app@latest
+
+to run and compile need to update package.json file first
+"scripts": {
+    "dev": "deno run -A --node-modules-dir npm:next@latest dev",
+    "build": "deno run -A --node-modules-dir npm:next@latest build",
+    "start": "deno run -A --node-modules-dir npm:next@latest start",
+    "lint": "next lint"
+  },
+
+
+to run 
+-deno run dev
